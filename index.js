@@ -6,10 +6,24 @@ class hero{
     }
 
     attack(){
-        "magia"
+        if (this.type == "mago"){
+            return "magia"
+        }else if(this.type == "gerreiro"){
+            return "espada"
+        }else if(this.type == "monge"){
+            return "artes marciais"
+        }else if(this.type == "ninja"){
+            return "shuriken"
+        }        
+    }
+
+    message(){
+        console.log(`o ${this.type} atacou usando ${this.attack()}`)
     }
 }
 
-let mago = new hero("Mago", 40, "mago")
+let mago = new hero("Hyago", 40, "mago")
+mago.message()
 
-console.log(mago.attack)
+let ninja = new hero("Hyury", 37, "ninja")
+ninja.message()
